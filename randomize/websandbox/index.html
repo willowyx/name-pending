@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Randomized chaos</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+        * {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        body {
+            background-color: #142238;
+            color: white;
+        }
+
+        input#gen_btn {
+            top: 5px;
+            left: 5px;
+            position: fixed;
+            font-size: 1.5em;
+        }
+
+        button {
+            font-size: 1.2em;
+        }
+
+        .section_lb {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            padding: 5px;
+        }
+
+        #showChart_btn {
+            bottom: 5px;
+            left: 5px;
+            position: fixed;
+        }
+
+
+        #hideChart_btn {
+            bottom: 5px;
+            left: 5px;
+            position: fixed;
+            display: none;
+        }
+
+        #openRepo_btn {
+            bottom: 5px;
+            right: 5px;
+            position: fixed;
+        }
+
+        #nvmRepo_btn {
+            bottom: 5px;
+            right: 5px;
+            position: fixed;
+            display: none;
+            z-index: 1;
+        }
+
+        #variableChart {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            max-height: 100%;
+            overflow: scroll;
+            position: fixed;
+            display: none;
+        }
+
+        table.customTable {
+            width: 100vw;
+            background-color: #FFFFFF;
+            border-collapse: collapse;
+            border-width: 2px;
+            border-color: #7EA8F8;
+            border-style: solid;
+            color: #000000;
+        }
+
+        table.customTable td, table.customTable th {
+            width: 100vw;
+            border-width: 2px;
+            border-color: #7EA8F8;
+            border-style: solid;
+            padding: 5px;
+        }
+
+        table.customTable thead {
+            width: 100vw;
+            background-color: #7EA8F8;
+        }
+
+        #section_lw {
+            background: rgb(0, 139, 139);
+            top: 50%;
+            left: 50%;
+            right: 0;
+            bottom: 0;
+            position: fixed;
+            padding: 15px;
+            display: none;
+            z-index: 1;
+        }
+
+        #output {
+            width: 50vw;
+            height: 25vh;
+            color: #fff;
+            padding: 15px;
+            border-radius: 15px;
+            border: 1px solid white;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script type="text/javascript">
+    document.getElementById("gen_btn").onclick = function() {
+        genContent();
+    };
+    
+    function genContent() {
+        var content = "";
+        lists();
+    // --- what works ---
+        content += r(pnoun).concat(" ", r(noun), " ");
+        content += r(verb).concat(" ", r(adj), ", ");
+        content += r(adl).concat("! ", r(emote));
+        // content += r(noun).concat(" ", r(verb), " ");
+        // content += r(adj).concat(", ");
+        // content += r(adl).concat("! ", r(emote));
+
+        if((Math.floor(Math.random() * 45)) === 0) {
+            //SECRET TEXT 1
+            document.getElementById('output').innerHTML = 'Washington DCs structures and roads were designed by satanic Freemasons who slipped in their pentagrams and devil worshiping structures into the city’s aesthetic&#46; There are countless pieces of imagery relating back to Freemasonry and Satanism&#44; such as corn and statues of Baal&#44; a demon in Christianity&#46; The Masons who designed Washington DC were believers in the Christian God’s existence&#44; so there is no doubt they intended devil worship with their imagery of Baal&#46; The Washington Monument was built to follow the dog star Sirius&#44; a known evil in the night sky&#46; There is also an unfinished&#44; otherwise known as a broken&#44; pentagram in the road layouts of the city&#46; Broken pentagrams are used by those wishing to summon demons for their earthly desires&#46; The broken pentagram is no coincidence&#44; and neither are the images of Baal and the Washington Monument lining up with the dog star Sirius&#46;';
+        } else if((Math.floor(Math.random() * 45)) === 1) {
+            //SECRET TEXT 2
+            document.getElementById('output').innerHTML = 'Washington DCs structures and roads were designed by satanic Freemasons who slipped in their pentagrams and devil worshiping structures into the city’s aesthetic&#46; There are countless pieces of imagery relating back to Freemasonry and Satanism&#44; such as corn and statues of Baal&#44; a demon in Christianity&#46; The Masons who designed Washington DC were believers in the Christian God’s existence&#44; so there is no doubt they intended devil worship with their imagery of Baal&#46; The Washington Monument was built to follow the dog star Sirius&#44; a known evil in the night sky&#46; There is also an unfinished&#44; otherwise known as a broken&#44; pentagram in the road layouts of the city&#46; Broken pentagrams are used by those wishing to summon demons for their earthly desires&#46; The broken pentagram is no coincidence&#44; and neither are the images of Baal and the Washington Monument lining up with the dog star Sirius&#46;';
+
+        } else {
+            document.getElementById("output").innerHTML = content.charAt(0).toUpperCase() + content.slice(1);
+        }
+
+    }
+    
+    function r(array) {
+        random = Math.floor(Math.random() * array.length);
+        value = array[random];
+        array.splice(random, 1);
+        return value;
+    };
+    
+    function lists() {
+    
+    // pronouns
+        pnoun = [
+            "Your",
+            "My",
+            "That",
+            "These",
+            "Those"
+        ]
+
+        // nouns
+        noun = [
+            "hair",
+            "outfit",
+            "eyeball",
+            "genocidal ideology",
+            "facial appearance",
+            "makeup",
+            "dump truck",
+            "hand",
+            "minecraft avatar",
+            "honkers",
+            "eyelashes",
+            "shoes",
+            "nails",
+            "nails on your toes",
+            "kidneys",
+            "lungs",
+            "liver",
+            "small intestine",
+            "large intestine",
+            "gallbladder",
+            "pancreas",
+            "spinal chord",
+            "pituitary gland",
+            "earlobes",
+            "lymph nodes",
+            "frontal lobe",
+            "brain stem",
+            "cerebellum",
+            "parietal lobe",
+            "temporal lobe",
+            "occipital lobe",
+            "reddit avatar",
+            "fursona",
+            "bedroom",
+            "cuticles",
+            "femur",
+            "sweat glands",
+            "breast implants",
+            "nasal cavity",
+            "blood vessels",
+            "bones",
+            "joints",
+            "trachea",
+            "nut",
+            "sensory receptors",
+            "adrenal gland",
+            "autosomal chromosomes",
+            "TYR gene",
+            "left ventricle",
+            "right ventricle",
+            "aorta",
+            "pulmonary artery",
+            "little tiny baby toe",
+            "fugg boots",
+            "kneecaps",
+            "morning hair",
+            "adopt-a-highway name",
+            "fingernail clippings"
+        ]
+        
+        // verbs
+        verb = [
+            "seems",
+            "looks",
+            "is",
+            "appears",
+            "is, like,",
+            "be",
+            "is totes",
+            "remains",
+            "quite possibly is",
+            "is, theoretically, totally",
+            "IS",
+            "are",
+            "look",
+            "seem",
+            "appear",
+            "are, like,",
+            "are totes",
+            "are totally",
+            "is so so so SO",
+            "are so so so SO",
+            "iiiiiiiis! *drumroll*",
+            "aaaaaaare! *drumroll*",
+            "might be",
+            "probably is",
+            "probably are",
+            "is probably",
+            "are probably",
+            "is one hundred percent",
+            "are one hundred percent",
+            "smell",
+            "smells",
+            "taste",
+            "tastes",
+            "feel",
+            "feels",
+            "sound",
+            "sounds",
+            "smells totally",
+            "smell totally",
+            "tastes totally",
+            "taste totally",
+            "feels totally",
+            "feel totally",
+            "sounds totally",
+            "sound totally",
+            "smells completely",
+            "smell completely",
+            "tastes completely",
+            "taste completely",
+            "feels completely",
+            "feel completely",
+            "sounds completely",
+            "sound completely",
+            "look kinda"
+        ]
+
+        // adjectives
+        adj = [
+            "radical",
+            "stunning",
+            "amazing",
+            "normal",
+            "cute",
+            "ballin",
+            "perfect",
+            "incredible",
+            "adorable",
+            "regular",
+            "substantial",
+            "noteworthy",
+            "NOT ugly",
+            "stinky in a positive way",
+            "delicious",
+            "yummy",
+            "NOT stinky in a negative way",
+            "pretty",
+            "beautiful",
+            "too cute",
+            "wonderful",
+            "absolutely adorable",
+            "supercalifragilisticexpialidocious",
+            "favorable",
+            "beaming",
+            "dazzling",
+            "lovely",
+            "nasty in a positive way",
+            "NOT nasty in a negative way",
+            "fergalicious",
+            "cool",
+            "craAaAaaAAAaazy",
+            "crazy",
+            "absolutely WILD",
+            "weird in such a good way",
+            "markedly interesting (/pos)",
+            "goofy in a silly way",
+            "weird lmao",
+            "so scrungly",
+            "kawaii 🌸",
+            "eepy"
+        ]
+
+        // u <3
+        adl = [
+            "cutie",
+            "babe",
+            "sweetie",
+            "friend",
+            "girlie",
+            "brah",
+            "dude",
+            "bestie",
+            "shawty",
+            "shawty bae",
+            "bae",
+            "homo",
+            "hun",
+            "honey",
+            "booboo",
+            "dear",
+            "lovely",
+            "baby",
+            "pookie",
+            "sweetums",
+            "stinker",
+            "sweetcakes",
+            "bookie",
+            "boobear",
+            "gay ass",
+            "homosexual",
+            "tax payer",
+            "9-5 worker",
+            "money maker",
+            "rapscallion",
+            "scallywag",
+            "miscreant",
+            "scoundrel",
+            "goober",
+            "rascal",
+            "swindler",
+            "weasel",
+            "stinker",
+            "goon",
+            "ragamuffin",
+            "panhandler",
+            "horseplayer",
+            "cuh",
+            "bruh",
+            "bluh",
+            "bro (gender neutral)",
+            "senpai",
+            "onii-chan"
+        ]
+
+        // emotes
+        emote = [
+            "💀",
+            "<3",
+            ":D",
+            ">:D",
+            ":3",
+            "o_O",
+            "✨",
+            "👉👈",
+            ";)",
+            "🥺",
+            "⊙▂⊙",
+            "(ノಠൠಠ)ノ彡┻━┻",
+            "(┳◇┳)",
+            "٩꒰ ˘ ³˘꒱۶~♡",
+            "=͟͟͞͞ =͟͟͞͞ ﾍ ( ´ Д `)ﾉ",
+            "✬̴⃛꒰⁍̴ꈊ ॢ⁍̴⌯꒱",
+            "ლ(◉‿◉ ლ)",
+            "⊹⋛⋋( ●´⌓`●)⋌⋚⊹",
+            "ᕙ(‾̀◡‾́)ᕗ",
+            "(。┰ω┰。)",
+            "ू(ʚ̴̶̷́ .̠ ʚ̴̶̷̥̀ ू)",
+            "( ๑ ᴖ ᴈ ᴖ)ᴖ ᴑ ᴖ๑)❣",
+            "♫꒰･‿･๑꒱",
+            "⁺✧.(˃̶ ॣ⌣ ॣ˂̶∗̀)ɞ⁾",
+            "( ⋆•ิ ᴈ-ิ(ᵕ❥ ᵕ⁎ ॢ)",
+            "( ✿◠‿◠ )",
+            "(✿◕‿◕)"
+        ]
+
+
+            // for(var i = 0; i<noun.length; i++) {
+            //     noun[i] = noun[i].split(",");
+            // }
+
+
+            document.getElementById('c0r1').innerHTML = pnoun;
+            document.getElementById('c1r1').innerHTML = noun;
+            document.getElementById('c2r1').innerHTML = verb;
+            document.getElementById('c3r1').innerHTML = adl;
+            document.getElementById('c4r1').innerHTML = adj;
+            document.getElementById('c5r1').innerHTML = emote;
+
+
+            document.getElementById('c0r1').innerHTML = document.getElementById('c0r1').innerHTML.split(',').join('<br>');
+            document.getElementById('c1r1').innerHTML = document.getElementById('c1r1').innerHTML.split(',').join('<br>');
+            document.getElementById('c2r1').innerHTML = document.getElementById('c2r1').innerHTML.split(',').join('<br>');
+            
+
+            document.getElementById('c3r1').innerHTML = document.getElementById('c3r1').innerHTML.split(',').join('<br>');
+            document.getElementById('c4r1').innerHTML = document.getElementById('c4r1').innerHTML.split(',').join('<br>');
+            document.getElementById('c5r1').innerHTML = document.getElementById('c5r1').innerHTML.split(',').join('<br>');
+
+
+            document.getElementById('th0').innerHTML = 'Pronoun';
+            document.getElementById('th1').innerHTML = 'Noun';
+            document.getElementById('th2').innerHTML = 'Verb';
+            document.getElementById('th3').innerHTML = 'you <3';
+            document.getElementById('th4').innerHTML = 'Adjective';
+            document.getElementById('th5').innerHTML = 'Emote';
+
+
+        }
+
+
+        function viewOptions() {
+            document.getElementById('variableChart').style.display = 'inline-block';
+            document.getElementById('showChart_btn').style.display = 'none';
+            document.getElementById('hideChart_btn').style.display = 'inline-block';
+        }
+
+
+        function hideOptions() {
+            document.getElementById('variableChart').style.display = 'none';
+            document.getElementById('showChart_btn').style.display = 'inline-block';
+            document.getElementById('hideChart_btn').style.display = 'none';
+        }
+
+        function showExtDia() {
+            document.getElementById('section_lw').style.display = 'inline-block';
+            document.getElementById('openRepo_btn').style.display = 'none';
+            document.getElementById('nvmRepo_btn').style.display = 'inline-block';
+        }
+
+
+        function hideExtDia() {
+            document.getElementById('section_lw').style.display = 'none';
+            document.getElementById('nvmRepo_btn').style.display = 'none';
+        }
+
+        function openRepo() {
+            window.open('https://github.com/willowyx/RandomizeMe/releases');
+        }
+    </script>
+<body>
+    <div>
+        <input type="button" value="Generate a compliment" id="gen_btn" onclick="genContent();">
+        <br><br>
+        <textarea id="output" style="font-size: 1.2em;" readonly="true">Click the button to generate a sentence!</textarea>
+
+
+        <div id="section_lw">
+            <div style="font-size:1.5em;">hey! u!</div>
+            <div>get randomize me for desktop for features like list editing, uwu mode,
+                controlled generation, and a profound sense of accomplishment!</div>
+            <button onclick="openRepo()">its on github</button> (MIT license)
+        </div>
+
+
+        <div class="section_lb">
+
+            <table class="customTable" id="variableChart">
+                <thead>
+                    <tr>
+                        <th id="th0"></th>
+                        <th id="th1"></th>
+                        <th id="th2">generate something first...</th>
+                        <th id="th3"></th>
+                        <th id="th4"></th>
+                        <th id="th5"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="c0r1"></td>
+                        <td id="c1r1"></td>
+                        <td id="c2r1"></td>
+                        <td id="c3r1"></td>
+                        <td id="c4r1"></td>
+                        <td id="c5r1"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <br>
+        </div>
+    </div>
+    <button id="showChart_btn" onclick="viewOptions();">chart viewer</button>
+    <button id="hideChart_btn" onclick="hideOptions();">close chart</button>
+    <button id="openRepo_btn" onclick="showExtDia();">get randomize me on your computah??</button>
+    <button id="nvmRepo_btn" onclick="hideExtDia();">no thanks pookie!</button>
+</body>
+</html>

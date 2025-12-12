@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>days without</title>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+        * {
+            font-family: monospace;
+        }
+
+        body {
+            margin: 0;
+            margin-bottom: 15%;
+            padding: 0;
+            background: rgba(24, 24, 24, 1);
+            color: #fff;
+        }
+
+        .header {
+            background: rgba(106, 76, 206, 0.8);
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            color: #fff;
+            background: rgb(12, 0, 12);
+            border-radius: 5px;
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .action {
+            background: rgb(12, 123, 220);
+            color: #fff;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .action:active {
+            background: rgb(10, 93, 166);
+        }
+
+        .action.post {
+            background: rgb(10, 93, 166);
+            cursor: none;
+        }
+
+        .fval {
+            padding: 1%;
+            background: #000;
+            font-size: 1.2em;
+        }
+
+        #thinkcap.pre {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        days without pining: <span class="fval" id="fvalmain">0</span>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <button class="action" id="ignorebtn">don't think about it</button>
+            <div class="pre" id="thinkcap">you thought about it :/</div>
+        </div>
+    </div>
+
+</body>
+</html>
